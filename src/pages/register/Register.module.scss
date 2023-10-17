@@ -1,0 +1,64 @@
+.register {
+    text-align: center;
+    padding: 6em 1em 8em 1em;
+    max-width: 630px;
+    margin: 0 auto;
+
+    h3 {
+        font-size: 5.4rem;
+        font-weight: 400;
+        padding-bottom: 0.5em;
+    }
+    span {
+        padding-top: 1em;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+
+        &-btn {
+            margin-top: 2em;
+        }
+        &-btn2 {
+            margin-top: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0970df;
+            width: 100%;
+
+            &:hover {
+                background-color: #0558b1;
+            }
+
+            span {
+                padding-top: 0;
+                padding-left: 0.3em;
+            }
+        }
+        
+    }
+    &__reset {
+        text-decoration: underline;
+        text-align: left;
+    }
+    &__register {
+        margin-top: 1em;
+
+        a {
+            text-decoration: underline;
+            padding-left: 0.5em;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .register {
+      h3 {
+        font-size: 6.4rem;
+      }
+    }
+  }
+  

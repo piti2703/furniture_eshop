@@ -1,0 +1,57 @@
+.home {
+    height: 75vh;
+
+    &__banner {
+        align-items: center;
+        background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../../assets/hero-bg.jpg);
+        background-position: bottom;
+        background-size: cover;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+
+        h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            padding-bottom: 0.3em;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+
+    }
+    &__icon {
+        bottom: 50px;
+        position: absolute;
+        animation: arrowtrans 1.5s infinite;
+    }
+}
+
+@keyframes arrowtrans {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@media(min-width: 768px) {
+    .home {
+        &__banner {
+            h2 {
+                font-size: 5rem;
+            }
+            h3 {
+                font-size: 3rem;
+            }
+        }
+    } 
+}

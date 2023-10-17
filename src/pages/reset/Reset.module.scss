@@ -1,0 +1,33 @@
+.reset {
+  text-align: center;
+  padding: 6em 1em 18.5em 1em;
+  max-width: 630px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 5.4rem;
+    font-weight: 400;
+    padding-bottom: 0.5em;
+  }
+  span {
+    padding-top: 1em;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+
+    &-btn {
+      margin-top: 2em;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .reset {
+    h3 {
+      font-size: 6.4rem;
+    }
+  }
+}
