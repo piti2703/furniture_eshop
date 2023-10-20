@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import Admin from "./pages/admin/Admin";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/reset" element={<Reset />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/admin/*" element={<Admin />} />
         </Routes>
         <Footer />
       </BrowserRouter>

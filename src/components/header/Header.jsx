@@ -15,6 +15,7 @@ import {
   SET_ACTIVE_USER,
 } from "../../redux/slices/authSlice";
 import ShowOnLogin, { ShowOnLogout } from "../hiddenLink/HiddenLink";
+import AdminOnlyRoute from "../AdminOnlyRoute/AdminOnlyRoute";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +52,7 @@ const Header = () => {
             : `${styles["header__nav-mobile"]}`
         }
       >
-        <NavLink to="/cart" onClick={toggleNavMobile}>
-          Admin
-        </NavLink>
+        <NavLink to="/admin">Admin</NavLink>
         <ShowOnLogin>
           <NavLink to="/orders" onClick={toggleNavMobile}>
             My Orders
@@ -98,9 +97,10 @@ const Header = () => {
           <NavLink to="/">Furniture-eShop</NavLink>
         </div>
         <nav className={styles.header__nav}>
-        <NavLink to="/cart" onClick={toggleNavMobile}>
-          Admin
-        </NavLink>
+          <AdminOnlyRoute>
+            <NavLink to="/admin">Admin</NavLink>
+          </AdminOnlyRoute>
+
           <ShowOnLogin>
             <NavLink to="/orders">My Orders</NavLink>
             <NavLink onClick={logoutUser}>Logout</NavLink>
